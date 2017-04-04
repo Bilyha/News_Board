@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 
 class NewsCards extends Component{
   render() {
@@ -11,7 +12,7 @@ class NewsCards extends Component{
                 <div key={index} className="newsContainer">
                   <h2> {news.title} </h2>
                   <p> {news.text} </p>
-                  <a href="#"> Read more...</a>
+                <Link to={news.title}> Read more...</Link>
                   <h3>{news.author} </h3>
                 </div>
             )}
